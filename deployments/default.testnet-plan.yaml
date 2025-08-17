@@ -1,0 +1,18 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: guess-the-number
+            expected-sender: STE68S8R8ZF1FHHY7QJBG6Y6VRPRWPTRXH4S2WNE
+            cost: 12870
+            path: "contracts\\guess-the-number.clar"
+            anchor-block-only: true
+            clarity-version: 3
+      epoch: "3.2"
